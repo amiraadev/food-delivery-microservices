@@ -22,11 +22,6 @@ export class RegisterDto {
 @InputType()
 export class LoginDto {
   @Field()
-  @IsNotEmpty({ message: 'Name is required.' })
-  @IsString({ message: 'Name need to be one string.' })
-  name: string;
-
-  @Field()
   @IsNotEmpty({ message: 'password is required.' })
   @MinLength(8, { message: 'Password must be at least 8 characters' })
   password: string;
